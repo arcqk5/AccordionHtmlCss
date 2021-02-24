@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion {
+
+}
+
+.accordion__item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.accordion__item--trigger {
+    display: block;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.accordion__item--content {
+    padding: 20px;
+    border: 1px solid #000;
+    border-top: none;
+
+    display: none;
+}
+
+.accordion__item--input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.accordion__item--input:checked ~ .accordion__item--trigger{
+    background-color: #555;
+}
+
+.accordion__item--input:checked ~ .accordion__item--content{
+    display: block;
+}
